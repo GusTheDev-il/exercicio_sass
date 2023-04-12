@@ -1,0 +1,33 @@
+$primary: #f5f6fa;
+$secundary: #44bd32;
+@use "sass:math";
+
+@mixin FlexCenter() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+@function pixelParaEm($alvoempixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoempixel, $contextoEmPixel);
+}
+
+body {
+    background-color: $primary;
+}
+
+@import "./header";
+
+section {
+    padding: 56px 0;
+}
+
+@import "./products";
+
